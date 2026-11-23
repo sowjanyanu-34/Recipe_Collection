@@ -160,8 +160,6 @@ npm start        # production-style run
 npm run dev      # auto-restart on file changes (nodemon)
 ```
 
-Open http://localhost:5000.
-
 ## 14. Insert sample data
 
 ```powershell
