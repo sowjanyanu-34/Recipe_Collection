@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add recipe | Recipe Collection</title>
+<meta name="description" content="Recipe Collection and Management System - discover, save and share recipes.">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="recipe-form" data-mode="add">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+<section class="container narrow page-pad">
+  <h1>Add a recipe</h1>
+  <form id="recipe-form" class="panel" novalidate>
+    <ul id="form-error" class="form-error" role="alert" hidden></ul>
+    <div class="field"><label for="recipeName">Recipe name</label><input id="recipeName" name="recipeName" type="text" required minlength="2" maxlength="100"></div>
+    <div class="field"><label for="description">Description</label><textarea id="description" name="description" rows="3" required minlength="10" maxlength="600" placeholder="A short summary that appears on the recipe card"></textarea></div>
+    <div class="row">
+      <div class="field"><label for="category">Category</label><select id="category" name="category" required><option value="">Choose a category</option><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snacks</option><option>Desserts</option><option>Beverages</option><option>Vegetarian</option><option>Non-Vegetarian</option></select></div>
+      <div class="field"><label for="cuisine">Cuisine type</label><input id="cuisine" name="cuisine" type="text" required maxlength="50" placeholder="e.g. South Indian"></div>
+    </div>
+    <div class="row row-4">
+      <div class="field"><label for="difficulty">Difficulty</label><select id="difficulty" name="difficulty" required><option>Easy</option><option>Medium</option><option>Hard</option></select></div>
+      <div class="field"><label for="preparationTime">Prep time (min)</label><input id="preparationTime" name="preparationTime" type="number" min="0" max="1440" value="15" required></div>
+      <div class="field"><label for="cookingTime">Cooking time (min)</label><input id="cookingTime" name="cookingTime" type="number" min="0" max="1440" value="30" required></div>
+      <div class="field"><label for="servings">Servings</label><input id="servings" name="servings" type="number" min="1" max="100" value="4" required></div>
+    </div>
+    <fieldset class="field"><legend>Ingredients and quantities</legend><div id="ingredients"></div><button type="button" id="add-ingredient" class="btn btn-outline btn-sm">Add ingredient</button></fieldset>
+    <fieldset class="field"><legend>Cooking instructions</legend><div id="steps"></div><button type="button" id="add-step" class="btn btn-outline btn-sm">Add step</button></fieldset>
+    <div class="field"><label for="tags">Tags</label><input id="tags" name="tags" type="text" placeholder="Separate with commas: quick, spicy, festive"></div>
+    <div class="field"><label for="image">Recipe image</label><input id="image" name="image" type="file" accept="image/jpeg,image/png,image/webp"><small>JPG, PNG or WEBP, up to 5 MB.</small>
+      <div class="img-preview" id="img-preview" hidden><img alt="Image preview"><label class="check" id="remove-wrap" hidden><input type="checkbox" id="removeImage"> Remove current image</label></div></div>
+    <div class="form-actions"><button class="btn btn-primary" type="submit" id="save-btn">Save recipe</button><a class="btn btn-outline" href="/my-recipes">Cancel</a></div>
+  </form>
+</section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<div id="toasts" aria-live="polite"></div>
+<noscript><p class="noscript">This site needs JavaScript to load recipes.</p></noscript>
+<script src="/js/app.js" defer></script><script src="/js/recipes.js" defer></script>
+</body>
+</html>

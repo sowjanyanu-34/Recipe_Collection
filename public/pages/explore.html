@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore recipes | Recipe Collection</title>
+<meta name="description" content="Recipe Collection and Management System - discover, save and share recipes.">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="explore">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+<section class="container page-pad">
+  <div class="section-head"><h1>Explore recipes</h1><a class="btn btn-primary" href="/recipes/new">Add a recipe</a></div>
+  <form id="filters" class="filters" autocomplete="off" role="search">
+  <div class="field grow"><label for="f-q">Search</label><input id="f-q" name="q" type="search" placeholder="Recipe, ingredient or cuisine"></div>
+  <div class="field"><label for="f-category">Category</label><select id="f-category" name="category"><option value="">All categories</option><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snacks</option><option>Desserts</option><option>Beverages</option><option>Vegetarian</option><option>Non-Vegetarian</option></select></div>
+  <div class="field"><label for="f-difficulty">Difficulty</label><select id="f-difficulty" name="difficulty"><option value="">Any difficulty</option><option>Easy</option><option>Medium</option><option>Hard</option></select></div>
+  <div class="field"><label for="f-cuisine">Cuisine</label><input id="f-cuisine" name="cuisine" type="text" placeholder="e.g. Italian"></div>
+  <div class="field"><label for="f-time">Total time</label><select id="f-time" name="maxTime"><option value="">Any time</option><option value="15">Up to 15 min</option><option value="30">Up to 30 min</option><option value="60">Up to 1 hour</option><option value="120">Up to 2 hours</option></select></div>
+  <div class="field"><label for="f-sort">Sort by</label><select id="f-sort" name="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="name">Name A to Z</option></select></div>
+  <button type="button" id="clear-filters" class="btn btn-outline">Clear filters</button>
+</form>
+<p id="count" class="result-count" aria-live="polite"></p>
+<div id="results" class="grid"></div>
+<nav id="pager" class="pager" aria-label="Pagination"></nav>
+</section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<div id="toasts" aria-live="polite"></div>
+<noscript><p class="noscript">This site needs JavaScript to load recipes.</p></noscript>
+<script src="/js/app.js" defer></script><script src="/js/recipes.js" defer></script>
+</body>
+</html>

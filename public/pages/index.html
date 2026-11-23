@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Recipe Collection</title>
+<meta name="description" content="Recipe Collection and Management System - discover, save and share recipes.">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Every recipe you love, in one kitchen.</h1>
+      <p class="lead">Save family favourites, discover new dishes and keep your whole recipe collection organised, searchable and ready for dinner.</p>
+      <form class="hero-search" action="/explore" method="get" role="search">
+        <label class="sr" for="hero-q">Search recipes</label>
+        <input id="hero-q" name="q" type="search" placeholder="Try paneer, pasta or lemon">
+        <button class="btn btn-primary" type="submit">Find recipes</button>
+      </form>
+      <div class="chips" id="home-cats"></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="/images/seed/masala-dosa.svg" alt=""><img src="/images/seed/chocolate-cake.svg" alt=""><img src="/images/seed/penne-arrabbiata.svg" alt="">
+    </div>
+  </div>
+</section>
+<section class="section"><div class="container">
+  <div class="section-head"><h2>Fresh from the community</h2><a class="link" href="/explore">Browse all recipes</a></div>
+  <div id="home-latest" class="grid"></div>
+</div></section>
+<section class="section band"><div class="container band-inner">
+  <div><h2>Got a recipe worth sharing?</h2><p>Add ingredients, steps and a photo. It appears in the collection straight away.</p></div>
+  <a id="home-cta" class="btn btn-primary" href="/register">Create a free account</a>
+</div></section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<div id="toasts" aria-live="polite"></div>
+<noscript><p class="noscript">This site needs JavaScript to load recipes.</p></noscript>
+<script src="/js/app.js" defer></script><script src="/js/recipes.js" defer></script>
+</body>
+</html>
