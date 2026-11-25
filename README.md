@@ -1,4 +1,4 @@
-# Recipe Collection and Management System using MongoDB
+# Recipe Collection and Management System using MongoDB:
 
 A full-stack recipe platform: users register, add recipes with photos, search and filter the collection, save favourites and see live dashboard statistics. All data is stored in MongoDB.
 
